@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Указываем путь к приватному ключу SSH
-PRIVATE_KEY_PATH="/root/key/git.ppk"
+PRIVATE_KEY_PATH="/root/key/gitN"
 
 # Список папок и файлов для добавления
 files_and_dirs=(
