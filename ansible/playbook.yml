@@ -1,0 +1,14 @@
+- name: Настройка VM
+  hosts: all
+  roles:
+    - role: vm_setup
+
+- name: Настройка проксирующего Nginx
+  hosts: proxies
+  roles:
+    - role: nginx_proxy
+
+- name: Настройка отдающего Nginx
+  hosts: servers
+  roles:
+    - role: nginx_backend

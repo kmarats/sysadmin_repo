@@ -1,0 +1,18 @@
+- name: Установить стандартные пакеты
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - net-tools
+    - dnsutils
+    - wget
+    - curl
+    - mc
+    - rsync
+
+- name: Изменение имени машины
+  become: yes
+  hostname:
+    name: "{{ inventory_hostname }}"
+

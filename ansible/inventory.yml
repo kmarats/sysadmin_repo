@@ -1,0 +1,15 @@
+all:
+  vars:
+    ansible_user: debian
+    ansible_ssh_private_key_file: /root/.ssh/id_ed25519
+  children:
+    proxies:
+      hosts:
+        proxy1:
+          ansible_host: 89.169.130.72
+    servers:
+      hosts:
+        server1:
+          ansible_host: 89.169.147.165
+        server2:
+          ansible_host: 51.250.65.246
